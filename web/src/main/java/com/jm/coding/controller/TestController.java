@@ -14,6 +14,11 @@ public class TestController {
     @Autowired
     private TestService testService;
 
+    /**
+     * 获取单号
+     * @param billId
+     * @return
+     */
     @RequestMapping("/getCode/{billId}")
     public String hello(@PathVariable Integer billId){
         //return testService.getCode(billId);
