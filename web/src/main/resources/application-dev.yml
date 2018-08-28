@@ -1,7 +1,7 @@
 spring:
   datasource:
     url: db
-    username: db
+    username: db #数据库链接
     password: db
     driver-class-name: com.microsoft.sqlserver.jdbc.SQLServerDriver
     platform: MS-SQL
