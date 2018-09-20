@@ -10,7 +10,19 @@
 <head>
     <title>index</title>
 </head>
+<script type="text/javascript" src="/util/jquery-3.3.1.min.js?v=2"></script>
+<script>
+    $(function () {
+        $.ajax({
+            type:'post',
+            url:'/api/hello',
+            success:function(data){
+                $("#ip")[0].innerHTML=data;
+            }
+        });
+    })
+</script>
 <body>
-    Hello World!
+    <span id="ip"></span>
 </body>
 </html>
