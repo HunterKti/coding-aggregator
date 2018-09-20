@@ -7,8 +7,11 @@ import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.net.InetAddress;
+import java.net.UnknownHostException;
+
 @RestController
-@RequestMapping("/api/test")
+@RequestMapping("/api")
 public class TestController {
 
     @Autowired
@@ -16,12 +19,18 @@ public class TestController {
 
     /**
      * 获取单号
-     * @param billId
+     * @param
      * @return
      */
-    @RequestMapping("/getCode/{billId}")
-    public String hello(@PathVariable Integer billId){
-        //return testService.getCode(billId);
-        return "DSGC18080925";
+    @RequestMapping(value = "/hello")
+    public String hello(){
+        InetAddress address = null;
+        try {
+            address = InetAddress.getLocalHost();
+        } catch (UnknownHostException e) {
+            e.printStackTrace();
+        }
+        String IP=address.getHostAddress().toString();//本机地址
+        return "IP:"+IP;
     }
 }

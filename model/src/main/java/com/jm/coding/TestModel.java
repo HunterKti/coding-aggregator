@@ -1,13 +1,8 @@
 package com.jm.coding;
 
+import lombok.Data;
+
+@Data
 public class TestModel {
     private String orderBillCode;
-
-    public String getOrderBillCode() {
-        return orderBillCode;
-    }
-
-    public void setOrderBillCode(String orderBillCode) {
-        this.orderBillCode = orderBillCode;
-    }
 }
