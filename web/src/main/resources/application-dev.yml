@@ -1,10 +1,13 @@
 spring:
   datasource:
-    url: db
+    url: jdbc:oracle:thin:@172.100.90.15:1521:orcl
     username: db #数据库链接
-    password: db
+    password: ABCabc123
     driver-class-name: oracle.jdbc.OracleDriver
     platform: oracle
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/seckill
 
   mybatis:
     config-location: classpath:mybatis-config.xml
