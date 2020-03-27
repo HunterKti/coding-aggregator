@@ -7,5 +7,6 @@ spring:
       prefix: /WEB-INF/jsp/
       suffix: .jsp
 
+# 启动端口号
 server:
   port: 8081
